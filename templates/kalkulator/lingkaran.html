@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kalkulator Lingkaran</title>
+    <style media="screen">
+    body{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      background-image: linear-gradient(120deg,#b33939,#ffb142);
+      background-size: cover;
+      min-height: 100vh;
+    }
+    .container{
+      width: 500px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-image: linear-gradient(120deg,#c8d6e5,#dff9fb);
+      transform: translate(-50%, -50%);
+      padding: 200px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 20px ;
+    }
+    .container h1{
+      font-size: 30px;
+      font-weight: 500;
+      background-image: linear-gradient(120deg,#130f40,#c7ecee);
+      border-radius: 20px;
+      color: white;
+      margin-top: -90px;
+    }
+    .text{
+      text-align: left;
+      margin-left: 10px;
+      margin-bottom: -100px;
+      color: black;
+      position: absolute;
+      margin-top: 9px;
+    }
+
+    .text{
+        font-size: large;
+        font-weight: 200;
+    }
+
+    #lingkaran{
+      color: #222f3e;
+      text-align: left;
+      font-size: 20px;
+      font-weight: 200;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid;
+      margin-top: 20px;
+    }
+
+    #lingkaran:focus{
+      border-bottom: 2px solid #341f97;
+      width: 300px;
+      transition: 0.9s;
+    }
+
+    #btn{
+      font-family: inherit;
+      margin-top: 20px;
+      margin-left: -20px;
+      border: none;
+      color: #fff;
+      background-image: linear-gradient(120deg,#2e86de,#48dbfb);
+      width: 180px;
+      padding: 15px;
+      border-radius: 30px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    #btn:hover{
+      box-shadow: 1px 1px 10px #00d2d3;
+    }
+
+    #btn2{
+      font-family: inherit;
+      margin-top: 100px;
+      margin-left: 10px;
+      border: none;
+      color: #fff;
+      background-image: linear-gradient(120deg,#2e86de,#48dbfb);
+      width: 110px;
+      padding: 15px;
+      border-radius: 30px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    #btn2:hover{
+      box-shadow: 1px 1px 10px #00d2d3;
+    }
+
+    .result{
+      background-image: linear-gradient(120deg,#576574,#c8d6e5);
+      padding: 1rem;
+      width: 130px;
+      height: 20px;
+      margin: 1rem;
+      margin-left: 170px;
+      color: black;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 3px;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid #576574;
+    }
+
+    .result1{
+      background-image: linear-gradient(120deg,#576574,#c8d6e5);
+      padding: 1rem;
+      width: 130px;
+      height: 20px;
+      margin: 1rem;
+      margin-left: -16px;
+      color: black;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 3px;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid #576574;
+    }
+
+    .text2{
+      color: black;
+      position: absolute;
+      margin-top: 20px;
+      text-align: left;
+      margin-left: -160px;
+    }
+
+    .text3{
+        color: black;
+        position: absolute;
+        margin-top: 20px;
+        text-align: left;
+        margin-left: -185px;
+      }
+      a{
+        text-decoration: none;
+      }
+      .image{
+          cursor: pointer;
+          float: right;
+          margin-top: 10px;
+          margin-right: -30px;
+          position: relative;
+          user-select: none;
+      }
+      .image img{
+          display: block;
+          height: 64px;
+          position: relative;
+          transition: background 0.2s ease-out;
+          width:60px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <a href="#" class="image">
+        <img src="https://raw.githubusercontent.com/CSPGhostDelta/halamanutama/main/template/home.png" alt="">
+      </a>
+      <h1>Lingkaran</h1>
+      <form action="/send" method="POST">
+        <div class="text">
+          <p>Jari-Jari : </p>
+        </div>
+
+        <input
+          type="text"
+          placeholder="Masukkan Jari-Jari (r)"
+          class="u-full-width"
+          id="lingkaran"
+          name="lingkaran"
+        />
+
+      <div class="result">
+        <p class="text2">Luas : </p>
+          {{ sum }}
+        <div class="result1">
+          <p class="text3">Keliling : </p>
+          {{ sum2 }}
+
+      </div>
+      <input type="submit" value="Hitung" id="btn">
+        <br />
+      </form>
+    </div>
+  </body>
+</html>
